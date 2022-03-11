@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -188,14 +189,92 @@
                     <view key="view" contentMode="scaleToFill" id="Amq-8g-Skb">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="YQH-za-RCm">
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" rowHeight="360" id="PtW-DX-MG8" customClass="FeedCellTableViewCell" customModule="SozlukApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="360"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="cell" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="PtW-DX-MG8" id="m7b-3j-skF" userLabel="Cell" customClass="FeedCellTableViewCell" customModule="SozlukApp" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="360"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kVM-wH-DbN">
+                                                    <rect key="frame" x="20" y="50.5" width="374" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="comment" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bpe-sy-wg0">
+                                                    <rect key="frame" x="20" y="229.5" width="374" height="20.5"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Idg-73-uPC">
+                                                    <rect key="frame" x="20" y="79" width="374" height="128"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0dE-S0-sQ6">
+                                                    <rect key="frame" x="31" y="259" width="46" height="31"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <state key="normal" title="Button"/>
+                                                    <buttonConfiguration key="configuration" style="plain" image="heart.fill" catalog="system">
+                                                        <backgroundConfiguration key="background">
+                                                            <imageReference key="image" image="heart.fill" catalog="system" symbolScale="medium"/>
+                                                        </backgroundConfiguration>
+                                                    </buttonConfiguration>
+                                                </button>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7dF-bc-NnE">
+                                                    <rect key="frame" x="317" y="259" width="77" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="documentıd" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nuB-1R-GUP">
+                                                    <rect key="frame" x="303" y="41" width="91" height="19"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <accessibility key="accessibilityConfiguration" identifier="Cell"/>
+                                        <connections>
+                                            <outlet property="commentLabel" destination="Bpe-sy-wg0" id="NIQ-6J-l2c"/>
+                                            <outlet property="documentId" destination="kVM-wH-DbN" id="5wG-ry-E9k"/>
+                                            <outlet property="likeButton" destination="0dE-S0-sQ6" id="1wF-2G-t1O"/>
+                                            <outlet property="likesLabel" destination="7dF-bc-NnE" id="RbH-YD-nbX"/>
+                                            <outlet property="userEmailLabel" destination="kVM-wH-DbN" id="Mbl-km-vUK"/>
+                                            <outlet property="userImageView" destination="Idg-73-uPC" id="R3Y-CC-9Bb"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="s3d-pf-4VU"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="YQH-za-RCm" firstAttribute="leading" secondItem="s3d-pf-4VU" secondAttribute="leading" id="DJK-KV-Csg"/>
+                            <constraint firstItem="YQH-za-RCm" firstAttribute="top" secondItem="s3d-pf-4VU" secondAttribute="top" id="Eia-Zm-igf"/>
+                            <constraint firstItem="YQH-za-RCm" firstAttribute="centerX" secondItem="Amq-8g-Skb" secondAttribute="centerX" id="jsd-eK-Chp"/>
+                            <constraint firstItem="YQH-za-RCm" firstAttribute="bottom" secondItem="s3d-pf-4VU" secondAttribute="bottom" id="rZB-vD-esV"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Feed" image="f.circle" catalog="system" id="oxu-A9-WLd"/>
+                    <connections>
+                        <outlet property="tableView" destination="YQH-za-RCm" id="6Uk-C6-OVR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RoE-Va-Tn4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1106" y="-341"/>
+            <point key="canvasLocation" x="1105.7971014492755" y="-341.51785714285711"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="k0V-pC-ugi">
@@ -220,6 +299,7 @@
     </scenes>
     <resources>
         <image name="f.circle" catalog="system" width="128" height="121"/>
+        <image name="heart.fill" catalog="system" width="128" height="109"/>
         <image name="png-clipart-computer-mouse-pointer-button-point-and-click-computer-mouse-electronics-text" width="900" height="1290"/>
         <image name="s.square" catalog="system" width="128" height="114"/>
         <image name="square.and.arrow.up.fill" catalog="system" width="115" height="128"/>
